@@ -35,7 +35,7 @@ Submission	Guidelines
 2. Sample	runs	of	the	code	to	show that	your	implementation	covers	each	of	the	
 items	above.
 
-![alt tag](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![alt tag](https://github.com/scarrillo9/assignment3adv/blob/master/tastk1.PNG)
 
 
 ##Task	2:	UML	State	Machines	Implementations
@@ -49,7 +49,7 @@ Submission	Guidelines
 2. Sample	runs	showing	different	sequences	of	events	with	queries	of	current	
 state.
 
-![alt tag](https://github.com/scarrillo9/assignment3adv/blob/master/tastk1.PNG)
+![alt tag](https://github.com/scarrillo9/assignment3adv/blob/master/task2.PNG)
 
 ##Task	3:	Implement	3	use	cases	you	have	identified for	your	project.
 Chose	three	use	cases	that	you	have	identified	for	your	project	and	implement	them	
