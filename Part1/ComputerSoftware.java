@@ -1,4 +1,6 @@
 
-public class ComputerSoftware {
+public class ComputerSoftware extends Item{
+
+	
 
 }
