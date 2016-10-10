@@ -3,6 +3,10 @@ public class Item {
 	private String title;
 	private double price;
 	
+	public void itemType(){
+		
+	}//end printItemType
+	
 	//GETTER METHODS//
 	public String getTitle(){
 		return title;

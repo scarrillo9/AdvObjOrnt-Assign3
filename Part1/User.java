@@ -1,4 +1,4 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class User {
 	private String name;
@@ -6,17 +6,18 @@ public class User {
 	private String password;
 	
 	public void browseItem(){
-		
+		System.out.println("Browse items.");
 	}//end browse item
 	
 	public void register(){
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter name:");
-		this.name = input.next();
-		System.out.println("Enter username:");
-		this.username = input.next();
-		System.out.println("Enter password:");
-		this.password = input.next();
+		System.out.println("Register");
+//		Scanner input = new Scanner(System.in);
+//		System.out.println("Enter name:");
+//		this.name = input.next();
+//		System.out.println("Enter username:");
+//		this.username = input.next();
+//		System.out.println("Enter password:");
+//		this.password = input.next();
 	}//end register
 	
 	
