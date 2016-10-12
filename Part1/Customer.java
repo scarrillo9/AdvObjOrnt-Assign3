@@ -1,8 +1,24 @@
+import java.util.Scanner;
+import java.util.Set;
 
 public class Customer extends User{
+	Scanner input = new Scanner(System.in);
 	private String homeAddress;
-	CreditCard[] cards;
+	Set<CreditCard> cards;
 	Cart shoppingCart;
+	
+	public Customer(String name, String username, String password){
+		setName(name);
+		setUsername(username);
+		setPassword(password);
+		
+		System.out.println("Home address: ");
+		this.homeAddress = input.nextLine();
+		
+		cards.add(new CreditCard());
+		
+		this.shoppingCart = new Cart();
+	}
 	
 	public void addToCart(Item t){
 		System.out.println("addToCart");
@@ -13,9 +29,7 @@ public class Customer extends User{
 	}//end checkoutCart
 	
 	public void printAllCreditCards(){
-		for(int i = 0; i < cards.length; i++){
-			System.out.println("Card #" + (i+1) + cards[i].getNumber());
-		}//end for
+		
 	}//end printAllCreditCards
 	
 	//GETTER//

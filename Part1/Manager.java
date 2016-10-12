@@ -35,8 +35,8 @@ public class Manager extends User{
 //		System.out.printf("Item updated: %s %d", t.getTitle(), t.getPrice());
 	}//end updateItem
 	
-	public void createCustomer(){
-		System.out.println("createCustomer");
+//	public void createCustomer(){
+//		System.out.println("createCustomer");
 //		Customer c = new Customer();
 //		System.out.println("Enter name: ");
 //		c.setName(input.nextLine());
@@ -49,7 +49,7 @@ public class Manager extends User{
 //		System.out.printf("Customer created: %s %s %s %s", c.getName(), 
 //				c.getUsername(), c.getPassword(), c.getHomeAddress());
 //		System.out.println("Enter credit card information\nCard number:");		
-	}//end createCustomer
+//	}//end createCustomer
 	
 	public void updateCustomer(Customer c){
 		System.out.println("updateCustomer");

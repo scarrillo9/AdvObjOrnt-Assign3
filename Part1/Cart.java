@@ -1,20 +1,25 @@
+import java.util.Set;
 
 public class Cart {
-	Item[] list;
+	Set<Item> list;
+	Customer c;
 
-	public void calculateCombinedPrice(){
-		//implement
+	public Cart(){
+		
 	}
 	
+	//CART CONSTRUCTOR
+	public void calculateCombinedPrice(){
+		
+	}//calculateCOmbinesPrice
+	
 	public void listItems(){
-		for(int i = 0; i < list.length; i++){
-			System.out.println("Item #" + (i+1) + list[i].getTitle());
-		}//end for
+		list.iterator();
 	}//end listItems
 	
 	public void printCustomer(){
-		//implement
-	}
+		System.out.printf("Customer: %s \n%s", c.getName(),c.getUsername());
+	}//end printCustomer
 	
 	public void orderByPrice(){
 		System.out.println("orderByPrice");
