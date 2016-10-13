@@ -29,132 +29,133 @@ Task	2:	UML	State	Machines	Implementations
 //
 import java.util.Scanner;
 
-
 public class stateMachine {
-public static Scanner input = new Scanner(System.in);
+	//Declare scannr
+	public static Scanner input = new Scanner(System.in);
+	
+	/** Main Class */
+	public static void main(String[] args) {
+		begin();
+	}//end main
 
+	/** Methods */
+	public enum state {
+		//Uses an enum instance to create 5 states.
+		normal, recoveryIdenetification, pressureRecovery, temperatureRecovery, recoveryFailure
+	}
 
-public enum state{
-normal, recoveryIdenetification, pressureRecovery, temperatureRecovery, recoveryFailure
+	state currState; //Stores the current state
 
-}
+	//Set the current state method (Constructor)
+	public stateMachine(state currState) {
+		this.currState = currState;
+	}
 
-state currState;
+	//Begin method
+	public static void begin() {
+		//Create a new machine at normal state
+		stateMachine enter = new stateMachine(state.normal);
+		enter.stateTraverse();
+	}
 
-public stateMachine(state currState) {
-this.currState = currState;
-}
+	//Traverse the state machine method
+	public void stateTraverse() {
+		switch (currState) {
+		case normal:
+			System.out.println("Normal state...");
+			System.out.println("Enter 1 to produce anomoly:");
+			stateInput(currState);
 
+		case recoveryIdenetification:
+			System.out.println("Recovery identification state...");
+			System.out.println("Enter 2 for pressure recovery state:");
+			System.out.println("Enter 3 for temperature recovery state:");
+			System.out.println("Enter 4 for recovery failure:");
+			stateInput(currState);
 
-public static void begin(){
-stateMachine enter = new stateMachine(state.normal);
-enter.stateTraverse();
-}
+		case pressureRecovery:
+			System.out.println("Pressure recovery state...");
+			System.out.println("Enter 0 for normal state:");
+			System.out.println("Enter 4 for recovery failure:");
+			stateInput(currState);
 
-public void stateInput(state currState){
-int s=-1;
-while(!input.hasNextInt()) {
-    input.next();
-}
-s = input.nextInt();
+		case temperatureRecovery:
+			System.out.println("Temperature recovery state...");
+			System.out.println("Enter 0 for normal state:");
+			System.out.println("Enter 4 for recovery failure:");
+			stateInput(currState);
 
-if(s > 4)
-   stateTraverse();
+		case recoveryFailure:
+			System.out.println("Recovery failed, bye.");
+			System.exit(0);
 
-if (currState == state.normal) {
-   if(s==1) {
-       stateMachine r = new stateMachine(state.recoveryIdenetification);
-       r.stateTraverse();
-   } else{
-       stateTraverse();
-   }
-}
+		default:
+			System.out.println(currState + " state...");
 
-if (currState == state.recoveryIdenetification) {
-   if(s==2) {
-       stateMachine p = new stateMachine(state.pressureRecovery);
-       p.stateTraverse();
-   } if(s==3) {
-       stateMachine t = new stateMachine(state.temperatureRecovery);
-       t.stateTraverse();
-   } if(s==4) {
-       stateMachine f = new stateMachine(state.recoveryFailure);
-       f.stateTraverse();
-   } else{
-       stateTraverse();
-   }
+		}
+	}
+	public void stateInput(state currState) {
+		int s = -1;
+		while (!input.hasNextInt()) {
+			input.next();
+		}
+		s = input.nextInt();
 
-}
+		if (s > 4) //invalid input
+			stateTraverse();
 
-if (currState == state.pressureRecovery) {
-   if(s==0) {
-       stateMachine n = new stateMachine(state.normal);
-   } if(s==4) {
-       stateMachine f = new stateMachine(state.recoveryFailure);
-   } else{
-       stateTraverse();
-   }
-}
+		if (currState == state.normal) {
+			if (s == 1) {
+				stateMachine r = new stateMachine(state.recoveryIdenetification);
+				r.stateTraverse();
+			} else {
+				stateTraverse();
+			}
+		}//end normal state
 
-if (currState == state.temperatureRecovery) {
-   if(s==0) {
-       stateMachine n = new stateMachine(state.normal);
-   } if(s==4) {
-       stateMachine f = new stateMachine(state.recoveryFailure);
-   } else{
-       stateTraverse();
-   }
-}
+		if (currState == state.recoveryIdenetification) {
+			if (s == 2) {
+				stateMachine p = new stateMachine(state.pressureRecovery);
+				p.stateTraverse();
+			}
+			if (s == 3) {
+				stateMachine t = new stateMachine(state.temperatureRecovery);
+				t.stateTraverse();
+			}
+			if (s == 4) {
+				stateMachine f = new stateMachine(state.recoveryFailure);
+				f.stateTraverse();
+			} else {
+				stateTraverse();
+			}
+		}//end recoveryIdentification
 
+		if (currState == state.pressureRecovery) {
+			if (s == 0) {
+				stateMachine n = new stateMachine(state.normal);
+				n.stateTraverse();
+			}
+			if (s == 4) {
+				stateMachine f = new stateMachine(state.recoveryFailure);
+				f.stateTraverse();
+			} else {
+				stateTraverse();
+			}
+		}//end pressureRecovery
 
+		if (currState == state.temperatureRecovery) {
+			if (s == 0) {
+				stateMachine n = new stateMachine(state.normal);
+				n.stateTraverse();
+			}
+			if (s == 4) {
+				stateMachine f = new stateMachine(state.recoveryFailure);
+				f.stateTraverse();
+			} else {
+				stateTraverse();
+			}
+		}//end temperatureRecovery
 
+	}//end state input
 
-}
-
-
-public void stateTraverse() {
-switch (currState) {
-   case normal:
-       System.out.println("Normal state...");
-       System.out.println("Enter 1 to produce anomoly:");
-       stateInput(currState);
-
-   case recoveryIdenetification:
-       System.out.println("Recovery identification state...");
-       System.out.println("Enter 2 for pressure recovery state:");
-       System.out.println("Enter 3 for temperature recovery state:");
-       System.out.println("Enter 4 for recovery failure");
-       stateInput(currState);
-
-
-
-   case pressureRecovery:
-       System.out.println("Pressure recovery state...");
-       System.out.println("Enter 0 for normal state:");
-       System.out.println("Enter 4 for recovery failure:");
-       stateInput(currState);
-
-
-
-   case temperatureRecovery:
-       System.out.println("temperature recovery state...");
-       System.out.println("Enter 0 for normal state:");
-       System.out.println("Enter 4 for recovery failure:");
-       stateInput(currState);
-       
-   case recoveryFailure:
-	   System.out.println("recovery failed, bye.");
-	   System.exit(0);
-
-
-
-   default:
-       System.out.println(currState + " state...");
-
-}
-}
-
-public static void main(String[] args){
-begin();
-}
-}//end
+}// end class
