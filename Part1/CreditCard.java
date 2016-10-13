@@ -1,23 +1,23 @@
 import java.util.Scanner;
 
 public class CreditCard {
-	private int number;
+	private long number;
 	private String expirationDate;
 	private int CVS;
 	
 	public CreditCard(){
 		Scanner input = new Scanner(System.in);
 		System.out.println("Card number: ");
-		this.number = input.nextInt();
+		this.number = input.nextLong();
 		System.out.println("Card expiration date: ");
-		this.expirationDate = input.nextLine();
+		this.expirationDate = input.next();
 		System.out.println("Card CVS: ");
 		this.CVS = input.nextInt();
-	}
+	}//constructor
 	
 	
 	//GETTER METHODS//
-	public int getNumber(){
+	public long getNumber(){
 		return number;
 	}
 	

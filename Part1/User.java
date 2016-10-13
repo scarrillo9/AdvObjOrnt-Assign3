@@ -4,18 +4,7 @@ public class User {
 	private String name;
 	private String username;
 	private String password;
-	
-	public Customer createCustomer(){
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter name:");
-		String cname = input.nextLine();
-		System.out.println("Enter username:");
-		String cusername = input.nextLine();
-		System.out.println("Enter password:");
-		String cpassword = input.nextLine();
-		Customer c = new Customer(cname, cusername, cpassword);
-		return c;
-	}
+	Scanner input = new Scanner(System.in);
 	
 	public void browseItem(){
 		System.out.println("Browse items.");

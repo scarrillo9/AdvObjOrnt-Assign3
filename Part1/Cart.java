@@ -3,9 +3,13 @@ import java.util.Set;
 public class Cart {
 	Set<Item> list;
 	Customer c;
-
-	public Cart(){
-		
+	
+	public Cart(String name, String username, String password, String address){
+		Customer c = new Customer();
+		c.setName(name);
+		c.setUsername(username);
+		c.setPassword(password);
+		c.setHomeAddress(address);
 	}
 	
 	//CART CONSTRUCTOR
@@ -18,7 +22,7 @@ public class Cart {
 	}//end listItems
 	
 	public void printCustomer(){
-		System.out.printf("Customer: %s \n%s", c.getName(),c.getUsername());
+		System.out.printf("Name: %s, Username: %s", c.getName(), c.getUsername());
 	}//end printCustomer
 	
 	public void orderByPrice(){

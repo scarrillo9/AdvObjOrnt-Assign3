@@ -1,3 +1,4 @@
+import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -7,17 +8,23 @@ public class Customer extends User{
 	Set<CreditCard> cards;
 	Cart shoppingCart;
 	
-	public Customer(String name, String username, String password){
-		setName(name);
-		setUsername(username);
-		setPassword(password);
-		
+	public Customer(){
+		System.out.println("Enter name:");
+		setName(input.nextLine());
+		System.out.println("Enter username:");
+		setUsername(input.nextLine());
+		System.out.println("Enter password:");
+		setPassword(input.nextLine());
 		System.out.println("Home address: ");
 		this.homeAddress = input.nextLine();
 		
-		cards.add(new CreditCard());
+		this.shoppingCart = new Cart(getName(), getUsername(), 
+				getPassword(), getHomeAddress());	
+				
+		Set<CreditCard> creditcards = new HashSet<CreditCard>();
+		CreditCard card = new CreditCard();
+		creditcards.add(card);
 		
-		this.shoppingCart = new Cart();
 	}
 	
 	public void addToCart(Item t){
