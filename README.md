@@ -35,7 +35,7 @@ Submission	Guidelines
 
 
 ##Task	2:	UML	State	Machines	Implementations
-#Done (Revised by Javi  and Sergio)
+###Done (Revised by Javi  and Sergio)
 
 Refer	to	the	state	machine	diagram	at	end	of	this	assignment	and	implement	its	
 behavior	in	Java.	Events	in	the	state	machine	can	be	invoked	by	the	user (and	should	
