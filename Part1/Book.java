@@ -1,21 +1,17 @@
 
 public class Book extends Item{
 	
-	public Book(Cart cart){
-		this.shoppingCart = cart;
-		System.out.println("Book title: ");
-		setTitle(input.nextLine());
-		System.out.println("Book price: ");
-		setPrice(input.nextDouble());
+	//Constructor
+	public Book(String title, double price){
+		this.setTitle(title);
+		this.setPrice(price);
+		this.itemType = "book"; //Type book
 	}
-	
+
+
 	public void showPreview(){
 		System.out.println("showPreview");
 	}//end show preview
 	
-	public void itemType(){
-		System.out.println("Book");
-	}
 	
-	
-}
+}//end class

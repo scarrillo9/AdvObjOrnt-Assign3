@@ -1,20 +1,15 @@
 
-public class MusicCD extends Item{
-	
-	public MusicCD(Cart cart){
-		this.shoppingCart = cart;
-		System.out.println("Book title: ");
-		setTitle(input.nextLine());
-		System.out.println("Book price: ");
-		setPrice(input.nextDouble());
+public class MusicCD extends Item {
+
+	// Constructor
+	public MusicCD(String title, double price) {
+		this.setTitle(title);
+		this.setPrice(price);
+		this.itemType = "MusicCD";
 	}
-	
-	public void playSample(){
-		System.out.println("playSample");
-	}
-	
-	public void itemType(){
-		System.out.println("Music CD");
-	}
-	
+
+	public void showPreview() {
+		System.out.println("showPreview");
+	}// end show preview
+
 }

@@ -1,12 +1,15 @@
-import java.util.HashSet;
+
 import java.util.Scanner;
 import java.util.Set;
 
 public class Customer extends User{
 	Scanner input = new Scanner(System.in);
+	
 	private String homeAddress;
-	public Set<CreditCard> cards;
-	public Cart shoppingCart;
+	
+	Set<CreditCard> cards;
+	
+	private Cart shoppingCart;
 	
 	public Customer(){
 		System.out.println("Enter name:");
@@ -18,17 +21,17 @@ public class Customer extends User{
 		System.out.println("Home address: ");
 		this.homeAddress = input.nextLine();
 		
-		this.shoppingCart = new Cart(getName(), getUsername(), 
-				getPassword(), getHomeAddress());	
-				
-		Set<CreditCard> creditcards = new HashSet<CreditCard>();
-		CreditCard card = new CreditCard();
-		creditcards.add(card);
+		//Create a new Cart
+		shoppingCart = new Cart();
+		//TO-DO
+		//Create a new Credit Card
 		
-	}
-	
+	}//end constructor
+
 	public void addToCart(Item t){
-		System.out.println("addToCart");
+		shoppingCart.getList().add(t);
+		System.out.println("addToCart: " +t.getTitle());
+		
 	}//end addToCart
 	
 	public void checkoutCart(){
@@ -39,15 +42,23 @@ public class Customer extends User{
 		
 	}//end printAllCreditCards
 	
-	//GETTER//
-	public String getHomeAddress(){
+	/* Getters and setters */
+	
+	public Cart getCart(){
+		return shoppingCart;
+	}
+
+	public String getHomeAddress() {
 		return homeAddress;
 	}
-	
-	//SETTER//
-	public void setHomeAddress(String homeAddress){
+
+
+	public void setHomeAddress(String homeAddress) {
 		this.homeAddress = homeAddress;
 	}
+
+	
+	
 
 }
 

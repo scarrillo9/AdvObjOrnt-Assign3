@@ -1,12 +1,13 @@
-import java.util.Scanner;
 
 public class Item {
 	private String title;
 	private double price;
-	public Cart shoppingCart;
-	Scanner input = new Scanner(System.in);
 	
-	public void itemType(){
+	protected String itemType; //Protected so the inherited classes can have access to it
+	
+	public String itemType(){
+		return itemType;
+		
 	}//end printItemType
 	
 	//GETTER METHODS//
