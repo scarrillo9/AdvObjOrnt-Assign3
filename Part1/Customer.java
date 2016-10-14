@@ -1,4 +1,5 @@
 
+import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -23,10 +24,27 @@ public class Customer extends User{
 		
 		//Create a new Cart
 		shoppingCart = new Cart();
+		shoppingCart.setCustomer(getName(), getUsername());
 		//TO-DO
 		//Create a new Credit Card
+		this.cards = creditCardList();
+		//cards.add(new CreditCard());
+		CreditCard cc = new CreditCard();
+		cards.add(cc);
 		
 	}//end constructor
+	
+	public Set<CreditCard> creditCardList(){
+		return (new HashSet<CreditCard>());
+	}//constructor
+	
+	public void listCreditCards(){
+		int i = 1;
+		for(CreditCard l : cards){
+			System.out.println("Card " + i + ": " + l.getNumber());
+			i++;
+		}
+	}
 
 	public void addToCart(Item t){
 		shoppingCart.getList().add(t);

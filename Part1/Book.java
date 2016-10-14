@@ -5,7 +5,7 @@ public class Book extends Item{
 	public Book(String title, double price){
 		this.setTitle(title);
 		this.setPrice(price);
-		this.itemType = "book"; //Type book
+		this.itemType = "Book"; //Type book
 	}
 
 

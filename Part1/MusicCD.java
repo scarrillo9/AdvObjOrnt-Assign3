@@ -5,7 +5,7 @@ public class MusicCD extends Item {
 	public MusicCD(String title, double price) {
 		this.setTitle(title);
 		this.setPrice(price);
-		this.itemType = "MusicCD";
+		this.itemType = "Music CD";
 	}
 
 	public void showPreview() {

@@ -5,10 +5,6 @@ public class Item {
 	
 	protected String itemType; //Protected so the inherited classes can have access to it
 	
-	public String itemType(){
-		return itemType;
-		
-	}//end printItemType
 	
 	//GETTER METHODS//
 	public String getTitle(){

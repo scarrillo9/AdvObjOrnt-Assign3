@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -5,6 +6,8 @@ import java.util.Set;
 public class Cart {
 	
 	private Set<Item> list; //Keep private
+	private String cName;
+	private String cUsername;
 	
 	//Constructor
 	public Cart(){
@@ -12,14 +15,27 @@ public class Cart {
 		setList(new HashSet<Item>());
 	}
 	
-	
-	public void calculateCombinedPrice(){
-		//TO-DO
+	public void setCustomer(String name, String username){
+		this.setcName(name);
+		this.setcUsername(username);
 	}
 	
-	/* printAll method does what the next method should (I think) 
-	 * So we can have one that just prints what the titles or the 
-	 * types and one that prints all the details*/
+	public void printCustomer(){
+		System.out.println("Customer: " + getcName() 
+			+ " ID: " + getcUsername());
+	}
+	
+	
+	public void calculateCombinedPrice(){
+		double price = 0;
+		DecimalFormat df = new DecimalFormat("#.##");
+		for(Item l : getList()){
+			price += l.getPrice();
+		}
+		System.out.print(df.format(price));
+	}
+	
+	
 	public void listItems(){
 		getList().iterator();
 	}//end listItems
@@ -28,8 +44,8 @@ public class Cart {
 	public void printAll() {
 		int i = 0; // Display the number of the item
 		for (Item it : getList()) {
-			//GRACIAS STEFF por ensenarme el poder de printf jajaja :)
-			System.out.printf("\nItem #%d is type %s. Title: %s, Price %.2f",i, it.itemType(), it.getTitle(), it.getPrice());
+			System.out.printf("Item #%d is type %s. Title: %s, Price %.2f\n",
+					i, it.itemType, it.getTitle(), it.getPrice());
 			i++;
 		}
 	}
@@ -46,6 +62,22 @@ public class Cart {
 
 	public void setList(Set<Item> list) {
 		this.list = list;
+	}
+
+	public String getcUsername() {
+		return cUsername;
+	}
+
+	public void setcUsername(String cUsername) {
+		this.cUsername = cUsername;
+	}
+
+	public String getcName() {
+		return cName;
+	}
+
+	public void setcName(String cName) {
+		this.cName = cName;
 	}
 	
 }

@@ -1,6 +1,18 @@
 public class Manager extends User{
 	private String employeeID;
 	
+	
+	public Manager(){
+		System.out.println("Enter name:");
+		setName(input.nextLine());
+		System.out.println("Enter username:");
+		setUsername(input.nextLine());
+		System.out.println("Enter password:");
+		setPassword(input.nextLine());
+		System.out.println("Employee ID: ");
+		this.employeeID = input.nextLine();
+	}
+	
 	public String getEmployeeID(){
 		return employeeID;
 	}//SETTER//

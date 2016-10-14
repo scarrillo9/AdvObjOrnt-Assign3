@@ -30,7 +30,7 @@ public class CreditCard {
 	}
 	
 	//SETTER METHODS//
-	public void setNumber(int number){
+	public void setNumber(long number){
 		this.number = number;
 	}
 	
@@ -41,4 +41,8 @@ public class CreditCard {
 	public void setCVS(int CVS){
 		this.CVS = CVS;
 	}
+	
+//	public Set<CreditCard> setList(Set<CreditCard> list) {
+//		this.list = list;
+//	}
 }

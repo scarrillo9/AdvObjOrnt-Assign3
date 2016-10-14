@@ -1,8 +1,10 @@
+import java.util.Scanner;
 
 public class User {
 	private String name;
 	private String username;
 	private String password;
+	Scanner input = new Scanner(System.in);
 	
 	public void browseItem(){
 		System.out.println("Browse items.");
