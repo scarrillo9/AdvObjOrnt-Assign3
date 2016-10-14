@@ -5,8 +5,8 @@ import java.util.Set;
 public class Customer extends User{
 	Scanner input = new Scanner(System.in);
 	private String homeAddress;
-	Set<CreditCard> cards;
-	Cart shoppingCart;
+	public Set<CreditCard> cards;
+	public Cart shoppingCart;
 	
 	public Customer(){
 		System.out.println("Enter name:");

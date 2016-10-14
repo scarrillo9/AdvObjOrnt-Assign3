@@ -1,10 +1,12 @@
+import java.util.Scanner;
 
 public class Item {
 	private String title;
 	private double price;
+	public Cart shoppingCart;
+	Scanner input = new Scanner(System.in);
 	
 	public void itemType(){
-		
 	}//end printItemType
 	
 	//GETTER METHODS//
