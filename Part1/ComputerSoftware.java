@@ -1,8 +1,7 @@
 
 public class ComputerSoftware extends Item{
 	
-	//TO-DO
-	//Actually this is a copy paste from any other item
+	//Constructor
 	public ComputerSoftware(String title, double price){
 		this.setTitle(title);
 		this.setPrice(price);
