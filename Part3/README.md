@@ -18,7 +18,7 @@ At register screen.
 Login Screen
 
 1. Accept
-2 .About Us
+2. About Us
 3. Help
 
 Register Screen
