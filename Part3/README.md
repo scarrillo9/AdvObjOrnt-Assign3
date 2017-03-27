@@ -30,18 +30,18 @@ Register Screen
 Home Screen
 
 1. Heartbeat
-  *Back
-  *Share
+   * Back
+   * Share
 2. Steps
-  *Back
-  *Share
+   * Back
+   * Share
 3. Temperature
-  *Back
-  *Share
+   * Back
+   * Share
 4. Sleep
-  *Back
-  *Share
+   * Back
+   * Share
 5. Share
-  *Back
-  *Share
+   * Back
+   * Share
 
