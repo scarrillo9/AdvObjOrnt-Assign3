@@ -1,5 +1,3 @@
-:smiley:
-
 #CS	3331 - Assignment	3
 ##UML	Class	Diagram	and	State	Machine	Implementation
 ##Due	October	14th by	end	of	day on	Blackboard
