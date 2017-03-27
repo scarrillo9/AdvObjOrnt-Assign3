@@ -1,11 +1,11 @@
-#CS	3331 - Assignment	3
-##UML	Class	Diagram	and	State	Machine	Implementation
-##Due	October	14th by	end	of	day on	Blackboard
+# CS	3331 - Assignment	3
+## UML	Class	Diagram	and	State	Machine	Implementation
+## Due	October	14th by	end	of	day on	Blackboard
 
 In	this	assignment,	you	are	going	to	implement	a	UML	Class	Diagram	and a	State	
 Machine	in	Java.
 
-##Task	1:	UML	Class	Diagram	Implementation
+## Task	1:	UML	Class	Diagram	Implementation
 
 Refer	to	the	class	diagram	at	the	end	of	this	assignment.	Implement	the	UML	Class	
 Diagram	in	Java.	Your	implementation	must	cover	the	following	items.
@@ -31,8 +31,8 @@ Submission	Guidelines
 ![alt tag](https://github.com/scarrillo9/assignment3adv/blob/master/tastk1.PNG)
 
 
-##Task	2:	UML	State	Machines	Implementations
-###Done (Revised by Javi  and Sergio)
+## Task	2:	UML	State	Machines	Implementations
+### Done (Revised by Javi  and Sergio)
 
 Refer	to	the	state	machine	diagram	at	end	of	this	assignment	and	implement	its	
 behavior	in	Java.	Events	in	the	state	machine	can	be	invoked	by	the	user (and	should	
@@ -46,7 +46,7 @@ Submission	Guidelines
 
 ![alt tag](https://github.com/scarrillo9/assignment3adv/blob/master/task2.PNG)
 
-##Task	3:	Implement	3	use	cases	you	have	identified for	your	project.
+## Task	3:	Implement	3	use	cases	you	have	identified for	your	project.
 
 Chose	three	use	cases	that	you	have	identified	for	your	project	and	implement	them	
 in	Java. Include	the	implemented	use	cases	in	your	submission.
